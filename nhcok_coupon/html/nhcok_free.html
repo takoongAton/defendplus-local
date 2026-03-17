@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Cache-Control" content="No-Cache">
+	<meta http-equiv="Pragma" content="No-Cache">
+	<meta http-equiv="Expires" content="now">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=contain, target-densitydpi=medium-dpi">
+	<title>NH콕뱅크 DefendPlus 무료구독권 발급 페이지</title>
+	<link rel="stylesheet" type="text/css" href="../css/nhcok_free.css" />
+	
+    <!-- google font Noto Sans KR -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400..900&display=swap" rel="stylesheet" />
+	
+	<style>
+	/* 기본 설정 */
+	* {margin:0; padding:0; list-style:none; box-sizing:border-box;}
+	:root {
+		--service-color: #00a397;
+		--primary-color: var(--service-color, #000000);
+		--text-main: #242424;
+		--text-gray: #545454;
+		--border-gray: #e5e5e5;
+		--border-radius:8px;
+	}
+	body {font-family: -apple-system, "BlinkMacSystemFont", "Roboto", sans-serif, system-ui, "Noto Sans KR","Noto Sans CJK","Apple SD Gothic Neo";}
+	button {cursor:pointer;}
+
+	/* 헤더 영역 */
+	.defendplus_free_header {padding:36px 24px;}
+	.defendplus_free_header_tit strong.service_name {display:block; margin-bottom:12px; color:#0084E4; font-size:30px; line-height:1.46666em; font-weight:800;}
+	.defendplus_free_header_tit .tit_sub {margin-bottom:4px; color:#1F2933; font-size:16px; line-height:1.375em; font-weight:700;}
+	.defendplus_free_header_tit .txt {color:#868686; font-size:13px; line-height:1.38461em; font-weight:400;}
+
+	.defendplus_free_header_service {display:flex; justify-content:space-between; align-items: flex-start; width:100%; margin-top:24px;}
+	.defendplus_free_header_service .service_box {position:relative;}
+	.defendplus_free_header_service .service_box span.icon {display:block; width:20px; height:20px;}
+	.defendplus_free_header_service .service_box span.icon img {display:block; width:100%; line-height:0;}
+	.defendplus_free_header_service .service_box .service_box_tit strong {display:block; margin-top:4px; color:#000; font-size:13px; line-height:1.46153em; font-weight:700; white-space:nowrap;}
+	.defendplus_free_header_service .service_box .service_box_tit p {display:block; color:#868686; font-size:12px; line-height:1.333333em; font-weight:400; letter-spacing:-0.05em;}
+	.defendplus_free_header_service .service_box {padding-right:19px;}
+	.defendplus_free_header_service .service_box + .service_box {padding-left:19px;}
+	.defendplus_free_header_service .service_box:last-of-type {padding-right:0px;}
+	.defendplus_free_header_service .service_box:nth-child(2)::before,
+	.defendplus_free_header_service .service_box:nth-child(2)::after {content:''; display:block; position:absolute; top:50%; width:0.5px; height:78.9%; background-color:#eee; transform:translateY(-50%);}
+	.defendplus_free_header_service .service_box:nth-child(2)::before {left:0;}
+	.defendplus_free_header_service .service_box:nth-child(2)::after {right:0;}
+
+	/* 쿠폰 영역 (발급 전/후) */
+	.defendplus_free_body {padding:0 24px 36px; text-align:center;}
+	.defendplus_free_coupon_before,
+	.defendplus_free_coupon_after {display:flex; flex-direction:column; justify-content:space-between; align-items:center; height:260px;}
+	.defendplus_free_body .txt_wrap {display:flex; flex-direction:column; gap:4px 0;}
+	.defendplus_free_coupon_before {padding:20px 12px 12px; border-radius:20px;
+	background: #00A7E4;
+background: linear-gradient(180deg,rgba(0, 167, 228, 1) 0%, rgba(8, 89, 219, 1) 100%);
+	}
+	.defendplus_free_body button {width:100%; height:48px; border-radius:15px; border:none; background-color:#fff;}
+	.defendplus_free_body button span {display:block; font-size:16px; line-height:1em; font-weight:700;}
+
+	.defendplus_free_coupon_before span.icon {display:inline-block; width:100px; height:100px; line-height:1em; margin-bottom:-2px}
+	.defendplus_free_coupon_before span.icon img {display:block; width:100%; line-height:1em;}
+
+	.defendplus_free_body .txt_wrap strong.tit {font-size:16px; line-height:1.5em;}
+	.defendplus_free_body .txt_wrap p.txt {font-size:12px; line-height:1.33333em; font-weight:400;}
+	.defendplus_free_coupon_before .txt_wrap {color:#fff; align-items: center;}
+
+	.defendplus_free_coupon_after {padding:24px 12px 12px; border-radius:20px; box-shadow:inset 0 0 0 2px #0084E4;
+		background: #FFF;
+		background: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%, rgba(238, 238, 238, 1) 100%);
+	}
+	.defendplus_free_coupon_after .txt_wrap strong.tit {color:#0084E4; font-size:20px; line-height:1.45em; font-weight:700;}
+	.defendplus_free_coupon_after .txt_wrap p.txt {color:#868686;}
+	.defendplus_free_coupon_after button {background-color:#0084E4;}
+	.defendplus_free_coupon_after button span {color:#fff;}
+
+	.btn_coupon_copy {transition:opacity 0.2s ease-in-out;}
+	.btn_coupon_copy.active {opacity:0.5;}
+
+
+	/* 쿠폰 코드 입력/표시 폼 */
+	.coupon_form {display:flex; flex-direction:column; gap:12px 0; width:100%;}
+	.coupon_num_wrap {display:flex; justify-content:space-between; align-items:center; height:48px; padding:0 21px; border:1px solid #C3C3C3; border-radius:15px; background-color: #fff;}
+	.coupon_num_wrap * {font-size:18px; font-weight:700;}
+	.coupon_num_wrap div.code {width:100%; text-align:center;}
+	.coupon_num_wrap div input {max-width:100%; width:100%; height:100%;}
+
+	/* 앱 스토어 다운로드 영역 */
+	.defendplus_free_store_wrap {display:flex; flex-direction:column; gap:24px 0; padding:24px 10px 36px; background-color:#eee; text-align:center;}
+	.defendplus_free_store_wrap .defendplus_free_store_tit {display:flex; flex-direction:column; gap:4px 0;}
+	.defendplus_free_store_wrap .defendplus_free_store_tit strong {display:block; color:#000; font-size:16px; line-height:1em; font-weight:700;}
+	.defendplus_free_store_wrap .defendplus_free_store_tit p {display:block; color:#868686; font-size:12px; line-height:1.33333em; font-weight:400;}
+	.defendplus_free_store_btn {display:flex; flex-direction:column; align-items:center; gap:4px;}
+	.defendplus_free_store_btn a {display:block; width:162px; height:auto; line-height:1em;}
+	.defendplus_free_store_btn a span {display:block; line-height:0em;}
+	.defendplus_free_store_btn a img {max-width:162px; width:100%; height:auto;}
+
+	/* 푸터 영역 */
+	.defendplus_free_footer {display:flex; flex-direction:column; gap:12px 0; width:100%; padding:36px 24px; background-color:#222;}
+	.defendplus_free_footer .defendplus_free_footer_tit strong {color:#fff; font-size:16px; line-height:1.5em; font-weight:700;}
+	.defendplus_free_footer .defendplus_free_footer_con {display:flex; flex-direction:column; gap:12px 0;}
+	.defendplus_free_footer .defendplus_free_footer_con ul {display:flex; flex-direction:column; gap:4px 0;}
+	.defendplus_free_footer .defendplus_free_footer_con ul li {color:#868686; font-size:12px; line-height:1.41666em; font-weight:400;}
+	.defendplus_free_footer .defendplus_free_footer_con p {color:#868686; font-size:12px; line-height:1.41666em; font-weight:400;}
+
+	/* 토스트 팝업 */
+	.toast-popup {
+		display: none;
+		position: fixed;
+		bottom: 50px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: rgba(0, 132, 228, 0.9); /* #0084E4 90% */
+		color: #fff;
+		padding: 12px 20px;
+		border-radius: 50px;
+		z-index: 9999;
+		align-items: center;
+		justify-content: center;
+		gap: 8px;
+		min-width: 250px;
+	}
+	.toast-popup.active {
+		display: flex;
+		animation: fadeInUp 0.3s ease-out, fadeOut 0.3s ease-in 2s forwards;
+	}
+	.toast-popup .icon {display:block; width:24px; height:24px;}
+	.toast-popup .icon img {display:block; width:100%; height:auto;}
+	.toast-popup p.txt {
+		margin: 0;
+		color: #fff;
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	@keyframes fadeInUp {
+		from { opacity: 0; transform: translate(-50%, 20px); }
+		to { opacity: 1; transform: translate(-50%, 0); }
+	}
+	@keyframes fadeOut {
+		from { opacity: 1; }
+		to { opacity: 0; }
+	}
+	</style>
+
+</head>
+<body>
+	
+	<div class="defendplus_free_wrap">
+		<div class="defendplus_free_header">
+
+			<div class="defendplus_free_header_tit">
+				<strong class="service_name">DefendPlus</strong>
+				<div class="tit_sub">농협 상호금융과 함께 <br />고객님의 금융자산을 보호해 드립니다.</div>
+				<p class="txt">일상 속 피싱·사기·악성 링크를 사전에 탐지해 <br />
+					안전한 디지털 생활을 지켜드립니다.</p>
+			</div>
+			<!-- // defendplus_free_header_tit -->
+
+			<div class="defendplus_free_header_service">
+				<div class="service_box">
+					<span class="icon"><img src="../images/ico_msg.png" alt="세이프메시지"></span>
+					<div class="service_box_tit">
+						<strong>세이프메시지</strong>
+						<p>메시지 내 악성링크 탐지</p>
+					</div>
+				</div>
+
+				<div class="service_box">
+					<span class="icon"><img src="../images/ico_brw.png" alt="세이프브라우징"></span>
+					<div class="service_box_tit">
+						<strong>세이프브라우징</strong>
+						<p>브라우저<br />악성 링크 탐지</p>
+					</div>
+				</div>
+
+				<div class="service_box">
+					<span class="icon"><img src="../images/ico_url.png" alt="URL/QR 검사"></span>
+					<div class="service_box_tit">
+						<strong>URL/QR 검사</strong>
+						<p>수동 입력으로즉시 확인</p>
+					</div>
+				</div>
+				
+			</div>
+			<!-- // defendplus_free_header_service -->
+			
+		</div>
+		<!-- // defendplus_free_header -->
+
+
+
+		<div class="defendplus_free_body">
+
+			<div class="defendplus_free_coupon_before">
+				<div class="txt_wrap">
+					<span class="icon"><img src="../images/ico_defensplus.png" alt="디펜드플러스"></span>
+					<strong class="tit">무료 구독권 등록</strong>
+					<p class="txt">
+						지금 쿠폰번호 발급받고 프리미엄 보안을 무료로!<br />
+						모든 기능 제한 없이 이용 가능
+					</p>
+				</div>
+				<div class="coupon_form">
+					<!-- <div class="coupon_num_wrap">
+						<input type="text" id="coupon_num" name="coupon_num" placeholder="쿠폰번호 입력">
+					</div> -->
+					<button type="button" class="btn_start"><span>지금 무료로 시작하기</span></button>
+				</div>
+			</div>
+			<!-- // defendplus_free_coupon_before -->
+
+			<div class="defendplus_free_coupon_after" style="display:none;">
+				<div class="txt_wrap">
+					<strong class="tit">발급 완료!</strong>
+					<p class="txt">
+						무료 구독권이 성공적으로 발급되었습니다.<br />
+						무료구독권의 등록 유효기간은 <br />
+						발급 시점부터 24시간입니다.<br />
+						아래 쿠폰 번호를 복사하여 사용하세요.
+					</p>
+				</div>
+				<div class="coupon_form">
+					<div class="coupon_num_wrap">
+						<div class="code">YCAS</div>
+						<span>-</span>
+						<div class="code">XDEU</div>
+						<span>-</span>
+						<div class="code">NFAQ</div>
+						<span>-</span>
+						<div class="code">CTAG</div>
+					</div>
+					<button type="button" class="btn_coupon_copy"><span>무료 구독권 번호 복사</span></button>
+				</div>
+			</div>
+			<!-- // defendplus_free_coupon_after  -->
+		</div>
+		<!-- // defendplus_free_body -->
+
+
+		<div class="defendplus_free_store_wrap">
+			<div class="defendplus_free_store_tit">
+				<strong>앱 설치</strong>
+				<p>아래 버튼을 클릭하여 앱을 설치해주세요.</p>
+			</div>
+			<!-- // defendplus_free_store_tit -->
+
+			<div class="defendplus_free_store_btn">
+				<a href="#" class="store_btn google"><span><img src="../images/ico_download_aos.png" alt="구글플레이"></span></a>
+				<a href="#" class="store_btn apple"><span><img src="../images/ico_download_ios.png" alt="앱스토어"></span></a>
+			</div>
+			<!-- // defendplus_free_store_btn -->
+		</div>
+		<!-- // defendplus_free_store_wrap -->
+
+
+		<div class="defendplus_free_footer">
+			<div class="defendplus_free_footer_tit">
+				<strong>아톤</strong>
+			</div>
+			<!-- // defendplus_free_footer_tit -->
+
+			<div class="defendplus_free_footer_con">
+				<ul>
+					<li>서울시 영등포구 여의대로108, 26층(파크원타워1)</li>
+					<li>대표자명: 김종서, 우길수</li>
+					<li>사업자번호: 107-81-71649</li>
+				</ul>
+				<p>© 2026 DefendPlus. All rights reserved.</p>
+			</div>
+			<!-- // defendplus_free_footer_con -->
+			
+		</div>
+		<!-- // defendplus_free_footer -->
+		
+	</div>
+	<!-- // defendplus_free_wrap -->
+
+
+<div class="toast-popup">
+	<span class="icon"><img src="../images/ico_copy.png" alt="복사 아이콘"></span>
+	<p class="txt">쿠폰번호가 복사되었습니다.</p>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const btnStart = document.querySelector('.btn_start');
+    const btnCopy = document.querySelector('.btn_coupon_copy');
+    const couponBefore = document.querySelector('.defendplus_free_coupon_before');
+    const couponAfter = document.querySelector('.defendplus_free_coupon_after');
+    const toast = document.querySelector('.toast-popup');
+
+    // 시작 버튼 클릭
+    if (btnStart) {
+        btnStart.addEventListener('click', () => {
+            couponBefore.style.display = 'none';
+            couponAfter.style.display = 'flex';
+        });
+    }
+
+    // 쿠폰 복사 버튼 클릭
+    if (btnCopy) {
+        btnCopy.addEventListener('click', () => {
+			// 토스트 팝업 표시
+            toast.classList.remove('active');
+			btnCopy.classList.add('active');
+            void toast.offsetWidth; // Trigger reflow for animation restart
+            toast.classList.add('active');
+
+			// 애니메이션 완료 후 클래스 제거 (2.3초 = 지연 2초 + 페이드아웃 0.3초)
+			setTimeout(() => {
+				btnCopy.classList.remove('active');
+				toast.classList.remove('active');
+			}, 2300);
+        });
+    }
+});
+</script>
+
+</body>
+</html>
