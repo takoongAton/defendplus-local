@@ -25,7 +25,7 @@ button {cursor:pointer;}
 .defendplus_free_header_service .service_box span.icon {display:block; width:20px; height:20px;}
 .defendplus_free_header_service .service_box span.icon img {display:block; width:100%; line-height:0;}
 .defendplus_free_header_service .service_box .service_box_tit strong {display:block; margin-top:4px; color:#000; font-size:13px; line-height:1.46153em; font-weight:700; white-space:nowrap;}
-.defendplus_free_header_service .service_box .service_box_tit p {display:block; color:#868686; font-size:12px; line-height:1.333333em; font-weight:400; letter-spacing:-0.05em;}
+.defendplus_free_header_service .service_box .service_box_tit p {display:block; color:#868686; font-size:12px; line-height:1.333333em; font-weight:400; letter-spacing:-0.05em; word-break:keep-all;}
 .defendplus_free_header_service .service_box {padding-right:19px;}
 .defendplus_free_header_service .service_box + .service_box {padding-left:19px;}
 .defendplus_free_header_service .service_box:last-of-type {padding-right:0px;}
@@ -105,9 +105,23 @@ button {cursor:pointer;}
     .defendplus_free_body {padding-right:12px; padding-left:12px;}
     .defendplus_free_header_service .service_box {padding-right:8px;}
     .defendplus_free_header_service .service_box + .service_box {padding-left:8px;}
-    .coupon_num_wrap div.code {font-size:12px;}
+    .coupon_num_wrap div.code {font-size:14px;}
     .coupon_issue_step, .coupon_result_step {height:280px;}
 }
+@media (max-width: 300px) {
+    .defendplus_free_header_service {flex-direction:column; gap:5px;}
+    .defendplus_free_header_service .service_box {display:flex; gap:5px; padding-right:0; align-items:flex-start;}
+    .defendplus_free_header_service .service_box + .service_box {padding-left:0;}
+    .defendplus_free_header_service .service_box .service_box_tit strong {margin-top:0; line-height:20px;}
+    .defendplus_free_header_service .service_box .service_box_tit p {line-height:20px;}
+    .defendplus_free_header_tit .txt  {word-break:keep-all;}
+    .defendplus_free_header_tit .txt br {display:none;}
+    .service_box_tit {gap:5px; margin-top:5px;}
+    .service_box_tit br {display:none;}
+    .defendplus_free_header_service .service_box span.icon {width:30px; height:30px; padding:5px; border-radius:100%; background-color:#f9f9f9;}
+    .defendplus_free_header_service .service_box:nth-child(2)::before,
+    .defendplus_free_header_service .service_box:nth-child(2)::after {content:unset;}
+}   
 
 @keyframes fadeInUp {from { opacity: 0; transform: translate(-50%, 20px); }to { opacity: 1; transform: translate(-50%, 0); }}
 @keyframes fadeOut {from { opacity: 1; }to { opacity: 0; }}
