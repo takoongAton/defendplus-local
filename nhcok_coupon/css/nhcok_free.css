@@ -93,11 +93,11 @@ button {cursor:pointer;}
 .defendplus_free_footer .defendplus_free_footer_con p {color:#868686; font-size:12px; line-height:1.41666em; font-weight:400;}
 
 /* 토스트 팝업 */
-.toast-popup {display:none; position:fixed; bottom:50px; left:50%; margin:0 auto; transform:translateX(-50%); background-color:color-mix(in srgb, rgb(var(--main-rgb)), transparent 10%); color:#fff; padding:12px 20px; border-radius:15px; z-index:9999; align-items:center; justify-content:center; gap:8px; min-width:250px; width:calc(100% - 72px); max-width:648px;}
+.toast-popup {display:none; position:fixed; bottom:50px; left:50%; margin:0 auto; transform:translateX(-50%); background-color:color-mix(in srgb, rgb(var(--main-rgb)), transparent 10%); color:#fff; padding:12px 20px; border-radius:15px; z-index:9999; align-items:center; justify-content:center; gap:4px; min-width:250px; width:calc(100% - 72px); max-width:648px;}
 .toast-popup.active {display:flex; animation:fadeInUp 0.3s ease-out, fadeOut 0.3s ease-in 2s forwards;}
 .toast-popup .icon {display:block; width:24px; height:24px;}
 .toast-popup .icon img {display:block; width:100%; height:auto;}
-.toast-popup p.txt {margin:0; color:#fff; font-weight:bold; font-size:16px; line-height:24px;}
+.toast-popup p.txt {margin:0; color:#fff; font-weight:bold; font-size:16px; line-height:24px; letter-spacing:-0.05em;}
 
 
 @media (max-width: 359px) {
