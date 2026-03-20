@@ -15,7 +15,7 @@ button {cursor:pointer;}
 .defendplus_free_wrap {max-width:720px; margin:0 auto; letter-spacing:-0.025em;}
 
 /* 헤더 영역 */
-.defendplus_free_header {padding:36px 24px; background: #EEEEEE; background: linear-gradient(180deg,rgba(238, 238, 238, 1) 0%, rgba(255, 255, 255, 1) 200px);}
+.defendplus_free_header {padding:36px 24px; background: #EEEEEE; background: linear-gradient(180deg,rgba(238, 238, 238, 1) 0%, rgba(255, 255, 255, 1) 200px); transition:all 0.2s ease-in-out;}
 .defendplus_free_header_tit strong.service_name {display:block; margin-bottom:12px; color:var(--primary-color); font-size:30px; line-height:1.46666em; font-weight:800;}
 .defendplus_free_header_tit .tit_sub {margin-bottom:4px; color:#1F2933; font-size:16px; line-height:1.375em; font-weight:700;}
 .defendplus_free_header_tit .txt {color:#868686; font-size:13px; line-height:1.38461em; font-weight:400;}
@@ -36,7 +36,7 @@ button {cursor:pointer;}
     
 
 /* 쿠폰 영역 (발급 전/후) */
-.defendplus_free_body {padding:0 24px 36px; text-align:center;}
+.defendplus_free_body {padding:0 24px 36px; text-align:center; transition:all 0.2s ease-in-out;}
 .coupon_issue_step,
 .coupon_result_step {display:flex; flex-direction:column; justify-content:space-between; align-items:center; height:260px;}
 .defendplus_free_body .txt_wrap {display:flex; flex-direction:column; gap:4px 0; width:100%; flex:1;}
