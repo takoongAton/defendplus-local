@@ -33,6 +33,7 @@ button {cursor:pointer;}
 .defendplus_free_header_service .service_box:nth-child(2)::after {content:''; display:block; position:absolute; top:50%; width:0.5px; height:78.9%; background-color:#eee; transform:translateY(-50%);}
 .defendplus_free_header_service .service_box:nth-child(2)::before {left:0;}
 .defendplus_free_header_service .service_box:nth-child(2)::after {right:0;}
+    
 
 /* 쿠폰 영역 (발급 전/후) */
 .defendplus_free_body {padding:0 24px 36px; text-align:center;}
@@ -97,6 +98,16 @@ button {cursor:pointer;}
 .toast-popup .icon {display:block; width:24px; height:24px;}
 .toast-popup .icon img {display:block; width:100%; height:auto;}
 .toast-popup p.txt {margin:0; color:#fff; font-weight:bold; font-size:16px; line-height:24px;}
+
+
+@media (max-width: 359px) {
+    .defendplus_free_header,
+    .defendplus_free_body {padding-right:12px; padding-left:12px;}
+    .defendplus_free_header_service .service_box {padding-right:8px;}
+    .defendplus_free_header_service .service_box + .service_box {padding-left:8px;}
+    .coupon_num_wrap div.code {font-size:12px;}
+    .coupon_issue_step, .coupon_result_step {height:280px;}
+}
 
 @keyframes fadeInUp {from { opacity: 0; transform: translate(-50%, 20px); }to { opacity: 1; transform: translate(-50%, 0); }}
 @keyframes fadeOut {from { opacity: 1; }to { opacity: 0; }}
