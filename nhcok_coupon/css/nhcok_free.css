@@ -107,6 +107,7 @@ button {cursor:pointer;}
     .defendplus_free_header_service .service_box + .service_box {padding-left:8px;}
     .coupon_num_wrap div.code {font-size:14px;}
     .coupon_issue_step, .coupon_result_step {height:280px;}
+    .toast-popup p.txt {font-size:14px;}
 }
 @media (max-width: 300px) {
     .defendplus_free_header_service {flex-direction:column; gap:5px;}
